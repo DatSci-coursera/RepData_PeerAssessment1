@@ -244,7 +244,7 @@ barplot(daily_aggr_reduced$steps, names.arg = daily_aggr_reduced$date, xlab = &q
 <pre><code>## [1] 10765
 </code></pre>
 
-<p>NOTE: those values would be lower if NAs would not have been removed</p>
+<p>NOTE: those values would be lower if different form of aggregation was used</p>
 
 <p>For comparison purposes one can consider the following alternative aggregations</p>
 
@@ -258,7 +258,7 @@ barplot(daily_aggr_reduced$steps, names.arg = daily_aggr_reduced$date, xlab = &q
 # tapply(activity_dataset$steps, activity_dataset$date, sum, na.rm = T)
 </code></pre>
 
-<p>In both cases above days which have only NAs would be counter as 0, instead of NA.</p>
+<p>In both cases above days which have only NAs would be counted as 0, instead of NA.</p>
 
 <p>Finding mean and median for alternative interpretation is left out of this analysis</p>
 

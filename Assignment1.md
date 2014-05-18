@@ -75,7 +75,7 @@ median(daily_aggr_reduced$steps)
 ```
 
 
-NOTE: those values would be lower if NAs would not have been removed
+NOTE: those values would be lower if different form of aggregation was used
 
 For comparison purposes one can consider the following alternative aggregations
 
@@ -90,7 +90,7 @@ For comparison purposes one can consider the following alternative aggregations
 # tapply(activity_dataset$steps, activity_dataset$date, sum, na.rm = T)
 ```
 
-In both cases above days which have only NAs would be counter as 0, instead of NA.
+In both cases above days which have only NAs would be counted as 0, instead of NA.
 
 Finding mean and median for alternative interpretation is left out of this analysis
 
