@@ -33,6 +33,10 @@ daily_aggr_reduced = aggregate(steps ~ date, sum, data = activity_dataset, na.rm
 barplot(daily_aggr_reduced$steps, names.arg = daily_aggr_reduced$date, xlab = "date", ylab = "total number of steps", main = "Total Number of Steps Taken Each Day")
 ```
 
+Alternative Interpretaion:
+```{r}
+hist(daily_aggr_reduced$steps, xlab = "total number of steps", main = "Number of steps per day", col = "deepskyblue", breaks = 10)
+```
 
 ### Mean and median total number of steps taken per day
 Mean total number of steps per day:
@@ -101,7 +105,12 @@ daily_aggr = aggregate(steps ~ date, sum, data = activity_dataset)
 barplot(daily_aggr$steps, names.arg = daily_aggr$date, xlab = "date", ylab = "total number of steps", main = "Total Number of Steps Taken Each Day")
 ```
 
-Major difference observed is that dataset became wider (since we filled in the days which were entirely missed (for example first day)), but the information provided serves no new information, as overall picture remains the same
+Alternative Interpretaion:
+```{r}
+hist(daily_aggr$steps, xlab = "total number of steps", main = "Number of steps per day", col = "deepskyblue", breaks = 10)
+```
+
+Major difference observed is that dataset became wider (higher in case of histogram), since we filled in the days which were entirely missed (for example first day), but the information provided serves no new information, as overall picture remains the same
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r}
 activity_dataset$weekdays = weekdays(activity_dataset$datetime)

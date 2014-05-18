@@ -52,6 +52,15 @@ barplot(daily_aggr_reduced$steps, names.arg = daily_aggr_reduced$date, xlab = "d
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
+Alternative Interpretaion:
+
+```r
+hist(daily_aggr_reduced$steps, xlab = "total number of steps", main = "Number of steps per day", 
+    col = "deepskyblue", breaks = 10)
+```
+
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+
 
 ### Mean and median total number of steps taken per day
 Mean total number of steps per day:
@@ -105,7 +114,7 @@ plot(within_day_aggr_reduced, pch = 20, main = "Average Number of steps taken wi
 lines(within_day_aggr_reduced)
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
 
 ```r
 # minor downside of using factors, type = 'l' is ignored by the plot
@@ -161,10 +170,20 @@ barplot(daily_aggr$steps, names.arg = daily_aggr$date, xlab = "date", ylab = "to
     main = "Total Number of Steps Taken Each Day")
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
 
 
-Major difference observed is that dataset became wider (since we filled in the days which were entirely missed (for example first day)), but the information provided serves no new information, as overall picture remains the same
+Alternative Interpretaion:
+
+```r
+hist(daily_aggr$steps, xlab = "total number of steps", main = "Number of steps per day", 
+    col = "deepskyblue", breaks = 10)
+```
+
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
+
+
+Major difference observed is that dataset became wider (higher in case of histogram), since we filled in the days which were entirely missed (for example first day), but the information provided serves no new information, as overall picture remains the same
 ## Are there differences in activity patterns between weekdays and weekends?
 
 ```r
@@ -182,7 +201,7 @@ plot(within_day_aggr_weekends, pch = 20, main = "Weekends")
 lines(within_day_aggr_weekends)
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12.png) 
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
 
 
 As we can see on workdays major activity apears on pre-work, lunch and post-work hours, with the biggest peak in the morning
