@@ -183,7 +183,29 @@ hist(daily_aggr$steps, xlab = "total number of steps", main = "Number of steps p
 ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13.png) 
 
 
-Major difference observed is that dataset became wider (higher in case of histogram), since we filled in the days which were entirely missed (for example first day), but the information provided serves no new information, as overall picture remains the same
+Mean total number of steps per day:
+
+```r
+mean(daily_aggr$steps)
+```
+
+```
+## [1] 10766
+```
+
+Median:
+
+```r
+median(daily_aggr$steps)
+```
+
+```
+## [1] 10766
+```
+
+
+Major difference observed is that dataset became wider (higher in case of histogram), since we filled in the days which were entirely missed (for example first day), but the information provided serves no new information, as overall picture remains the same. Mean and median remained at around the same place, since mean was used to impute NAs, and median was at the same place as mean for this dataset
+
 ## Are there differences in activity patterns between weekdays and weekends?
 
 ```r
@@ -201,7 +223,7 @@ plot(within_day_aggr_weekends, pch = 20, main = "Weekends")
 lines(within_day_aggr_weekends)
 ```
 
-![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
 
 
 As we can see on workdays major activity apears on pre-work, lunch and post-work hours, with the biggest peak in the morning

@@ -110,7 +110,17 @@ Alternative Interpretaion:
 hist(daily_aggr$steps, xlab = "total number of steps", main = "Number of steps per day", col = "deepskyblue", breaks = 10)
 ```
 
-Major difference observed is that dataset became wider (higher in case of histogram), since we filled in the days which were entirely missed (for example first day), but the information provided serves no new information, as overall picture remains the same
+Mean total number of steps per day:
+```{r}
+mean(daily_aggr$steps)
+```
+Median:
+```{r}
+median(daily_aggr$steps)
+```
+
+Major difference observed is that dataset became wider (higher in case of histogram), since we filled in the days which were entirely missed (for example first day), but the information provided serves no new information, as overall picture remains the same. Mean and median remained at around the same place, since mean was used to impute NAs, and median was at the same place as mean for this dataset
+
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r}
 activity_dataset$weekdays = weekdays(activity_dataset$datetime)
