@@ -310,7 +310,7 @@ na_number
 
 <p>Total number of missing values is 2304</p>
 
-<p>Using mean value for 5-min interval is used as a replacement for NA</p>
+<p>Mean value for 5-min interval is used as a replacement for NA (strategy suggested in the guidelines)</p>
 
 <pre><code class="r">temp_dataset = merge(activity_dataset, within_day_aggr_reduced, by = &quot;interval&quot;)
 # sort dataset by the same variables
